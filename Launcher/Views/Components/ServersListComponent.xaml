@@ -21,8 +21,8 @@
                     <DataTemplate>
                         <Border Style="{StaticResource ServerElementStyle}">
                             <Image Source="{Binding Image}" 
-                               Width="23"
-                               Height="23" />
+                               Width="24"
+                               Height="24" />
                         </Border>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
