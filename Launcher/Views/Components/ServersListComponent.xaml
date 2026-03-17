@@ -22,7 +22,7 @@
                         <Border Style="{StaticResource ServerElementStyle}">
                             <Image Source="{Binding Image}" 
                                Width="24"
-                               Height="24" />
+                               Height="23" />
                         </Border>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
