@@ -3,9 +3,10 @@
     
     <!-- Background Window -->
     <SolidColorBrush x:Key="BackgroundColor" Color="White"/>
-    
+    <SolidColorBrush x:Key="PrimaryColor" Color="#008C45"/>
+
     <!-- Navigation Colors -->
-    <SolidColorBrush x:Key="BorderBrushColor" Color="White"/>
+    <SolidColorBrush x:Key="BorderBrushColor" Color="#232323"/>
     <SolidColorBrush x:Key="BorderBackgroundColor" Color="#80000000"/>
 
     <!-- SecondaryButton Colors -->
@@ -17,24 +18,60 @@
     <!-- ServersPanel Colors -->
     <SolidColorBrush x:Key="ServerBackgroundImageColor" Color="#10FFFFFF"/>
     
-
     <Style x:Key="WindowBorderStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
         <Setter Property="CornerRadius" Value="10" />
     </Style>
-    
+
     <Style x:Key="ServersListBorder" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-        <Setter Property="CornerRadius" Value="30" />
-        <Setter Property="Padding" Value="7, 7" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="Padding" Value="5, 5" />
+    </Style>
+    
+    <Style x:Key="ServersListBox" TargetType="ListBox">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
     </Style>
     
     <Style x:Key="ServerElementStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource ServerBackgroundImageColor}"/>
         <Setter Property="CornerRadius" Value="50" />
-        <Setter Property="Margin" Value="3, 0" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="Width" Value="40" />
+        <Setter Property="Margin" Value="2, 0" />
+        <Setter Property="Height" Value="44" />
+        <Setter Property="Width" Value="44" />
+    </Style>
+
+    <Style x:Key="ServerChooseButton" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Margin" Value="4 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="PART_ServerBorder" Width="40" Height="40" CornerRadius="40">
+                        <Image Source="{Binding Image}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" TargetName="PART_ServerBorder" Value="{StaticResource PrimaryColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="PART_ServerBorder" Value="{StaticResource PrimaryColor}"/>
+                            <Setter Property="Cursor" TargetName="PART_ServerBorder" Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False" >
+                            <Setter Property="Background" TargetName="PART_ServerBorder" Value="{StaticResource BorderBrushColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ServerImageStyle" TargetType="Image">
+        <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"/>
     </Style>
 
     <Style x:Key="NavigationPanel" TargetType="Border">
@@ -42,7 +79,6 @@
         <Setter Property="Background" Value="{StaticResource BorderBackgroundColor}" />
         <Setter Property="BorderThickness" Value="0, 1, 0, 0" />
     </Style>
-    
     
     <Style x:Key="PageStyle" TargetType="Page">
         <Setter Property="Background">
@@ -55,7 +91,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -68,23 +104,26 @@
         </Setter>
     </Style>
 
-
+    <Style x:Key="ProfileBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        <Setter Property="Padding" Value="5, 5" />
+        <Setter Property="Width" Value="110"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="CornerRadius" Value="25"/>
+    </Style>
     
     <Style x:Key="ProfileButton" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        <Setter Property="Background" Value="{StaticResource ServerBackgroundImageColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Margin" Value="0 0 4 0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" Background="{TemplateBinding Background}"
-                            Height="50"
-                            Width="110"
-                            CornerRadius="25"
+                    <Border x:Name="border" Background="{TemplateBinding Background}" Width="40" Height="40" CornerRadius="40"
                             SnapsToDevicePixels="true">
                         <ContentPresenter x:Name="contentPresenter" Focusable="False" 
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 

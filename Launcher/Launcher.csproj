@@ -13,6 +13,7 @@
     <None Remove="Views\Resources\Images\profile_icon.svg" />
     <None Remove="Views\Resources\Images\затемненное-изображение.jpg" />
     <None Remove="Views\Resources\Images\кубик.png" />
+    <None Remove="Views\Resources\Images\Лого.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +30,7 @@
     <Resource Include="Views\Resources\Images\cube.png" />
     <Resource Include="Views\Resources\Images\profile_icon.svg" />
     <Resource Include="Views\Resources\Images\затемненное-изображение.jpg" />
+    <Resource Include="Views\Resources\Images\Лого.png" />
   </ItemGroup>
 
 </Project>

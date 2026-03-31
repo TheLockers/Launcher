@@ -22,6 +22,17 @@ namespace Launcher.Views.Components
 
 
 
+        public IServer SelectedServer
+        {
+            get { return (IServer)GetValue(SelectedServerProperty); }
+            set { SetValue(SelectedServerProperty, value); }
+        }
+
+        public static readonly DependencyProperty SelectedServerProperty =
+            DependencyProperty.Register(nameof(SelectedServer), typeof(IServer), typeof(ServersListComponent), new PropertyMetadata(null));
+
+
+
         public ServersListComponent()
         {
             InitializeComponent();

@@ -17,6 +17,8 @@ namespace Launcher.ViewModels
         }
         #endregion
 
+
+
         public DashboardViewModel()
         {
             BitmapImage bitmapimage = new BitmapImage();
@@ -30,6 +32,56 @@ namespace Launcher.ViewModels
                 Image = bitmapimage
             });
 
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
+            ServersList.Add(new Server
+            {
+                Name = "Magic",
+                Image = bitmapimage
+            });
             ServersList.Add(new Server
             {
                 Name = "Magic",
