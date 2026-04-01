@@ -20,7 +20,7 @@ namespace Launcher.ViewModels
         {
             BitmapImage bitmapimage = new BitmapImage();
             bitmapimage.BeginInit();
-            bitmapimage.UriSource = new Uri(@"C:\Users\polun\source\repos\Launcher\Launcher\Views\Resources\Images\cube.png");
+            bitmapimage.UriSource = new Uri(@"C:\Users\polun\source\repos\Launcher\Launcher\Views\Resources\Images\cube_comp.png");
             bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
             bitmapimage.EndInit();
             ServersList.Add(new Server

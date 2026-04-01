@@ -19,10 +19,26 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
             <RowDefinition />
-            <RowDefinition Height="70" />
+            <RowDefinition Height="80" />
         </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <components:AllServerCounterComponent Grid.Column="0"
+                                                  PlayerCount="2546"/>
+
+            <components:ServerLoaderComponent Grid.Column="1"
+                                              Title="Загрузка сервера..."
+                                              Description="minecraft.jar"
+                                              VerticalAlignment="Center"/>
+        </Grid>
 
         <Border Grid.Row="2"  Style="{StaticResource NavigationPanel}">
             <Grid>
@@ -39,10 +55,9 @@
                     <StackPanel Orientation="Horizontal"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center">
-                        <Image Source="pack://application:,,,/Views/Resources/Images/Лого.png" 
-                               Width="28" Height="28" 
-                               Stretch="Uniform"
-                               />   
+                        <svgc:SvgViewbox Source="/Views/Resources/Images/x64px_comp.svg" 
+                                         Height="40" 
+                                         Width="40"/> 
                     </StackPanel>
                 </Button>
 
@@ -64,7 +79,7 @@
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center">
                             <svgc:SvgViewbox 
-                                Source="/Views/Resources/Images/profile_icon.svg" 
+                                Source="/Views/Resources/Images/profile_icon_comp.svg" 
                                 Height="28" 
                                 Width="28"/>
                         </Button>

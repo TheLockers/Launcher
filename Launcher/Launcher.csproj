@@ -10,10 +10,14 @@
 
   <ItemGroup>
     <None Remove="Views\Resources\Images\cube.png" />
+    <None Remove="Views\Resources\Images\cube_comp.png" />
+    <None Remove="Views\Resources\Images\downloadiconx64_comp.svg" />
     <None Remove="Views\Resources\Images\profile_icon.svg" />
+    <None Remove="Views\Resources\Images\profile_icon_comp.svg" />
+    <None Remove="Views\Resources\Images\x64px_comp.svg" />
     <None Remove="Views\Resources\Images\затемненное-изображение.jpg" />
+    <None Remove="Views\Resources\Images\затемненное-изображение_comp.jpg" />
     <None Remove="Views\Resources\Images\кубик.png" />
-    <None Remove="Views\Resources\Images\Лого.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,14 +27,14 @@
 
   <ItemGroup>
     <Folder Include="Core\Logger\" />
-    <Folder Include="Views\Converters\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Views\Resources\Images\cube.png" />
-    <Resource Include="Views\Resources\Images\profile_icon.svg" />
-    <Resource Include="Views\Resources\Images\затемненное-изображение.jpg" />
-    <Resource Include="Views\Resources\Images\Лого.png" />
+    <Resource Include="Views\Resources\Images\cube_comp.png" />
+    <Resource Include="Views\Resources\Images\downloadiconx64_comp.svg" />
+    <Resource Include="Views\Resources\Images\profile_icon_comp.svg" />
+    <Resource Include="Views\Resources\Images\x64px_comp.svg" />
+    <Resource Include="Views\Resources\Images\затемненное-изображение_comp.jpg" />
   </ItemGroup>
 
 </Project>
