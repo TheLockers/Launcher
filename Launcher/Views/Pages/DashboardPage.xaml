@@ -32,15 +32,17 @@
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Click="NavigateToWebsite_Click" 
+                <Button 
                         Width="50" Height="50"
                         ToolTip="Перейти на сайт"
                         Background="Transparent">      
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
                         <Image Source="pack://application:,,,/Views/Resources/Images/Лого.png" 
-                               Width="20" Height="20" 
+                               Width="28" Height="28" 
                                Stretch="Uniform"
-                               Margin="0,0,5,0"/>   
+                               />   
                     </StackPanel>
                 </Button>
 

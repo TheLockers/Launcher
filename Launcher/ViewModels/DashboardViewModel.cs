@@ -7,7 +7,6 @@ namespace Launcher.ViewModels
 {
     public class DashboardViewModel : MvxViewModel
     {
-
         #region Текущая страницца
         private ObservableCollection<IServer> _serversList = new ObservableCollection<IServer>();
         public ObservableCollection<IServer> ServersList
@@ -16,8 +15,6 @@ namespace Launcher.ViewModels
             set => SetProperty(ref _serversList, value);
         }
         #endregion
-
-
 
         public DashboardViewModel()
         {
@@ -87,7 +84,6 @@ namespace Launcher.ViewModels
                 Name = "Magic",
                 Image = bitmapimage
             });
-
         }
     }
 }
