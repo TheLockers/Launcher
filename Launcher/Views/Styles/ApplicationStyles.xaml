@@ -5,6 +5,8 @@
     <!-- Background Window -->
     <SolidColorBrush x:Key="BackgroundColor" Color="White"/>
     <SolidColorBrush x:Key="PrimaryColor" Color="#008C45"/>
+    <SolidColorBrush x:Key="ContentForegroundColor" Color="#989898"/>
+    <SolidColorBrush x:Key="HeadLineContentForegroundColor" Color="#ffffff"/>
 
     <!-- Navigation Colors -->
     <SolidColorBrush x:Key="BorderBrushColor" Color="#232323"/>
@@ -21,6 +23,7 @@
 
     <Style x:Key="AllCountPlayerStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        
         <Setter Property="CornerRadius" Value="15"/>
         <Setter Property="MaxWidth" Value="150"/>
         <Setter Property="Height" Value="65"/>

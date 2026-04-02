@@ -14,18 +14,25 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <svgc:SvgViewbox Source="/Views/Resources/Images/downloadiconx64_comp.svg" 
-                             Height="24" 
-                             Width="24"/>
+            <svgc:SvgViewbox Source="/Views/Resources/Images/profile_icon.svg" 
+                             Height="32" 
+                             Width="32"/>
 
             <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
                         Grid.Column="1">
-                <TextBlock Text="На серерах: "/>
-                <TextBlock>
+                <TextBlock Text="На серерах: "
+                           FontSize="16"
+                           Foreground="{StaticResource ContentForegroundColor}"/>
+                <TextBlock >
                     <Run Text="{Binding PlayerCount}"
-                         
-                         d:Text="2546"/>
-                    <Run Text="чел."/>
+                         d:Text="2546"
+                         FontWeight="Bold"
+                         FontSize="20"
+                         Foreground="{StaticResource HeadLineContentForegroundColor}"/>
+                    <Run Text="чел."
+                         FontSize="16"
+                         Foreground="{StaticResource ContentForegroundColor}"/>
                 </TextBlock>
             </StackPanel>
                         
