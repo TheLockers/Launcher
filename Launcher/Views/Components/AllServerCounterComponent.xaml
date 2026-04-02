@@ -14,24 +14,31 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <svgc:SvgViewbox Source="/Views/Resources/Images/profile_icon.svg" 
-                             Height="32" 
-                             Width="32"/>
+            <Border Background="{StaticResource PrimaryColor}"
+                    Width="44"
+                    Height="44"
+                    CornerRadius="10">
+                <Image Source="C:\Users\polun\source\repos\Launcher\Launcher\Views\Resources\Images\playercount.png"
+                   Width="40"
+                   Height="40"/>
+            </Border>
+            
 
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
-                        Grid.Column="1">
+                        Grid.Column="1"
+                        Margin="10 0 0 0">
                 <TextBlock Text="На серерах: "
-                           FontSize="16"
+                           FontSize="14"
                            Foreground="{StaticResource ContentForegroundColor}"/>
-                <TextBlock >
+                <TextBlock Margin="0 3 0 0">
                     <Run Text="{Binding PlayerCount}"
                          d:Text="2546"
                          FontWeight="Bold"
-                         FontSize="20"
+                         FontSize="18"
                          Foreground="{StaticResource HeadLineContentForegroundColor}"/>
                     <Run Text="чел."
-                         FontSize="16"
+                         FontSize="14"
                          Foreground="{StaticResource ContentForegroundColor}"/>
                 </TextBlock>
             </StackPanel>

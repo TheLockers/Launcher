@@ -24,21 +24,26 @@
             <RowDefinition Height="80" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition />
-                <ColumnDefinition Width="200"/>
-            </Grid.ColumnDefinitions>
+        <Border Grid.Row="0"
+                Padding="0 10 0 0">
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
 
-            <components:AllServerCounterComponent Grid.Column="0"
-                                                  PlayerCount="2546"/>
+                <components:AllServerCounterComponent Grid.Column="0"
+                                          PlayerCount="2546"/>
 
-            <components:ServerLoaderComponent Grid.Column="1"
-                                              Title="Загрузка сервера..."
-                                              Description="minecraft.jar"
-                                              VerticalAlignment="Center"/>
-        </Grid>
+                <components:ServerLoaderComponent Grid.Column="1"
+                                      Title="Загрузка сервера..."
+                                      Description="minecraft.jar"
+                                      VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+        
+        
 
         <Border Grid.Row="2"  Style="{StaticResource NavigationPanel}">
             <Grid>
