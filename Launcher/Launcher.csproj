@@ -15,6 +15,7 @@
     <None Remove="Views\Resources\Images\playercount.png" />
     <None Remove="Views\Resources\Images\profile_icon.svg" />
     <None Remove="Views\Resources\Images\profile_icon_comp.svg" />
+    <None Remove="Views\Resources\Images\settinds_icon.png" />
     <None Remove="Views\Resources\Images\x64px_comp.svg" />
     <None Remove="Views\Resources\Images\затемненное-изображение.jpg" />
     <None Remove="Views\Resources\Images\затемненное-изображение_comp.jpg" />
@@ -35,6 +36,8 @@
     <Resource Include="Views\Resources\Images\downloadiconx64_comp.svg" />
     <Resource Include="Views\Resources\Images\playercount.png" />
     <Resource Include="Views\Resources\Images\profile_icon_comp.svg" />
+    <Resource Include="Views\Resources\Images\settinds_icon.png" />
+    <Resource Include="Views\Resources\Images\settings_icon.svg" />
     <Resource Include="Views\Resources\Images\x64px_comp.svg" />
     <Resource Include="Views\Resources\Images\затемненное-изображение_comp.jpg" />
   </ItemGroup>

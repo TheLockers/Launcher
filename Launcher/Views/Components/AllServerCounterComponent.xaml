@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Launcher.Views.Components" 
              xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              mc:Ignorable="d" 
-             d:DesignHeight="120" d:DesignWidth="300">
+             d:DesignHeight="70" d:DesignWidth="165">
     <Border Style="{StaticResource AllCountPlayerStyle}">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -14,13 +14,13 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Border Background="{StaticResource PrimaryColor}"
+            <Border Background="{StaticResource BrushPrimaryColor}"
                     Width="44"
                     Height="44"
                     CornerRadius="10">
                 <Image Source="C:\Users\polun\source\repos\Launcher\Launcher\Views\Resources\Images\playercount.png"
-                   Width="40"
-                   Height="40"/>
+                   Width="36"
+                   Height="36"/>
             </Border>
             
 

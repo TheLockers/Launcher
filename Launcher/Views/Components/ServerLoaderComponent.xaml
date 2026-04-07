@@ -16,8 +16,8 @@
             </Grid.ColumnDefinitions>
 
             <svgc:SvgViewbox Source="/Views/Resources/Images/downloadiconx64_comp.svg" 
-                             Height="24" 
-                             Width="24"/>
+                             Height="32" 
+                             Width="32"/>
 
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Center"

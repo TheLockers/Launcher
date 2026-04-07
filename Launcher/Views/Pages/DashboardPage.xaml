@@ -34,16 +34,20 @@
                 </Grid.ColumnDefinitions>
 
                 <components:AllServerCounterComponent Grid.Column="0"
-                                          PlayerCount="2546"/>
+                                                      PlayerCount="2546"/>
 
                 <components:ServerLoaderComponent Grid.Column="1"
-                                      Title="Загрузка сервера..."
-                                      Description="minecraft.jar"
-                                      VerticalAlignment="Center"/>
+                                                  Title="Загрузка сервера..."
+                                                  Description="minecraft.jar"
+                                                  VerticalAlignment="Center"/>
+
+                <Button Grid.Column="2">
+                    <svgc:SvgViewbox Source="/Views/Resources/Images/settings_icon.svg" 
+                                     Height="48" 
+                                     Width="48"/>
+                </Button>
             </Grid>
         </Border>
-        
-        
 
         <Border Grid.Row="2"  Style="{StaticResource NavigationPanel}">
             <Grid>
@@ -53,17 +57,12 @@
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
 
-                <Button 
-                        Width="50" Height="50"
-                        ToolTip="Перейти на сайт"
-                        Background="Transparent">      
-                    <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
-                        <svgc:SvgViewbox Source="/Views/Resources/Images/x64px_comp.svg" 
-                                         Height="40" 
-                                         Width="40"/> 
-                    </StackPanel>
+                <Button  Grid.Column="0"
+                         Style="{StaticResource SiteButton}"
+                         ToolTip="Перейти на сайт" >
+                    <svgc:SvgViewbox Source="/Views/Resources/Images/x64px_comp.svg" 
+                                         Height="48" 
+                                         Width="48"/> 
                 </Button>
 
                 <Grid Grid.Column="1"

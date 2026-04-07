@@ -9,7 +9,7 @@ namespace Launcher.Views.Pages
     /// </summary>
     public partial class DashboardPage : Page
     {
-
+        
         public DashboardPage()
         {
             InitializeComponent();
