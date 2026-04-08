@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Launcher.Views.Components.ProfilePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+             xmlns:local="clr-namespace:Launcher.Views.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="160">
+
+    <Border Style="{DynamicResource ProfileBorder}">
+        <Button Style="{DynamicResource CoinsBar}"
+                HorizontalAlignment="Left">
+            
+        </Button>
+        <Button Style="{DynamicResource ProfileButton}" 
+                HorizontalAlignment="Right">
+            <svgc:SvgViewbox Source="\Views\Resources\Images\profile_icon_comp.svg" 
+                             Width="28"
+                             Height="28"/>
+        </Button>
+    </Border>
+</UserControl>

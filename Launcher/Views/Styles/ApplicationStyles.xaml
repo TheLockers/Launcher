@@ -15,6 +15,8 @@
     <SolidColorBrush x:Key="BorderBackgroundColor" Color="#80000000"/>
 
     <!-- SecondaryButton Colors -->
+    <Color x:Key="Color.Button.Static">#121212</Color>
+    <Color x:Key="Color.Button.MouseOver">#171717</Color>
     <SolidColorBrush x:Key="Button.Static.Background" Color="#121212"/>
     <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#171717"/>
     <SolidColorBrush x:Key="Button.Pressed.Background" Color="#121212"/>
@@ -149,19 +151,25 @@
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border x:Name="PART_ServerBorder" Width="40" Height="40" CornerRadius="40" Background="{StaticResource BorderBrushColor}">
-                        <Image Source="{Binding Image}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28"/>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" 
+                            Background="{StaticResource Button.Static.Background}"
+                            Width="48" 
+                            Height="48" 
+                            CornerRadius="40" >
+                        <ContentPresenter x:Name="contentPresenter" 
+                                          Focusable="False" 
+                                          HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center" />   
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-
-                                        <ColorAnimation Storyboard.TargetName="PART_ServerBorder"
+                                        <ColorAnimation Storyboard.TargetName="border"
                                         Storyboard.TargetProperty="Background.Color"
-                                        To="{StaticResource PrimaryColor}" 
+                                        To="{StaticResource Color.Button.MouseOver}" 
                                         Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -169,16 +177,13 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="PART_ServerBorder"
+                                        <ColorAnimation Storyboard.TargetName="border"
                                         Storyboard.TargetProperty="Background.Color"
-                                        To="{StaticResource BorderColor}" 
+                                        To="{StaticResource Color.Button.Static}" 
                                         Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" TargetName="PART_ServerBorder" Value="{StaticResource PrimaryColor}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -337,11 +342,21 @@
     <Style x:Key="ProfileBorder" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
         <Setter Property="Padding" Value="5, 5" />
-        <Setter Property="Width" Value="110"/>
+        <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="50"/>
         <Setter Property="CornerRadius" Value="25"/>
     </Style>
 
+    <Style x:Key="CoinsBar" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource ServerBackgroundImageColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+
+    </Style>
+    
     <Style x:Key="ProfileButton" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource ServerBackgroundImageColor}"/>
@@ -349,7 +364,6 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0 0 4 0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
